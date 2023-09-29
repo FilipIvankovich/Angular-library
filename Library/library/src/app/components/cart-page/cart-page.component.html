@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="page-title" *ngIf="cart && cart.items.length > 0">
+    Borrow Page
+  </div>
+  <app-not-found
+    [visible]="!cart || !cart.items.length"
+    notFoundMessage="Your cart is empty..."
+    resetLinkText="Go To Homepage"
+  >
+  </app-not-found>
+  <ul class="cart-items" *ngIf="cart && cart.items.length > 0">
+    <li *ngFor="let cartItem of cart.items" class="cart-item">
+      <div>
+        <img [src]="cartItem.book.imageUrl" [alt]="cartItem.book.name" class="book-image"/>
+      </div>
+      <div class="item-section">
+        <a routerLink="/book/{{cartItem.book.id}}">
+          {{cartItem.book.name}}
+        </a>
+      </div>
+      <div class="item-section">
+        <div>
+          By {{cartItem.book.author}}
+        </div>
+        <div>
+          Pages {{cartItem.book.pageNo}}
+        </div>
+        <div>
+          Published on {{cartItem.book.publishDate}}
+        </div>
+      </div>
+      <div class="item-section">
+        <div class="remove-button" (click)="removeFromCart(cartItem)">
+          Remove
+        </div>
+      </div>
+    </li>
+  </ul>
+  <div class="checkout" *ngIf="cart && cart.items.length > 0">
+    <button class="borrow-button" (click)="borrow()">Borrow</button>
+  </div>
+</div>

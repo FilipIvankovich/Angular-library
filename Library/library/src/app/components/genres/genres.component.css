@@ -1,0 +1,26 @@
+.genres-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.genre{
+  background-color: brown;
+  border: 1px solid brown;
+  color: whitesmoke;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+.genre:hover{
+  background-color: whitesmoke;
+  color: brown;
+  transition: 0.5s;
+}

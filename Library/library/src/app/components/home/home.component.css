@@ -1,0 +1,83 @@
+body{
+  margin: 0 auto;
+  width: 70%;
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+li a {
+  min-height: 350px;
+  min-width: 200px;
+  border: 1px solid brown;
+  border-radius: 16px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: brown;
+  transition: 0.5s;
+}
+li a:hover{
+  color: whitesmoke;
+  background-color: brown;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.bookImage{
+  height: 300px;
+  width: 200px;
+  border-radius: 16px;
+}
+
+.content{
+  margin-top: 4px;
+  padding: 8px 16px;
+  position: relative;
+  min-height: 100px;
+  width: 200px;
+}
+
+.borrowed{
+  opacity: 0.5;
+  margin-top: auto;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.notBorrowed{
+  margin-top: auto;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.genres{
+  display: flex;
+  justify-content:baseline;
+  align-items: flex-start;
+  margin: 5px 0;
+  width: 180px;
+  flex-wrap: wrap;
+}
+
+.genres span{
+  border-radius: 32px;
+  background-color: whitesmoke;
+  display: inline-block;
+  font-size: 14px;
+  color: brown;
+  margin-right: 5px;
+  padding: 0 8px;
+  margin-top: 4px;
+}
+
+.name{
+  margin-bottom: 10px;
+}

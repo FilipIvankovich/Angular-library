@@ -1,0 +1,5 @@
+<div *ngIf="genres" class="genres-container">
+  <a *ngFor="let genre of genres" routerLink="/genre/{{genre.name}}" class="genre">
+    {{genre.name}} ({{genre.count}})
+  </a>
+</div>

@@ -1,0 +1,82 @@
+<app-not-found
+  [visible]="!book"
+  notFoundMessage="Book Not in Store"
+  resetLinkText="Back To Homepage"
+>
+</app-not-found>
+<div class = "container" *ngIf="book && !user.isAdmin">
+  <div class="left-side">
+    <img [src]="book.imageUrl" [alt]="book.name" class="book-image"/>
+
+
+    <button *ngIf="isAuth" (click)="addToCart()" class="notBorrowed">Add to Cart</button>
+  </div>
+
+  <div class="details">
+    <div class="header">
+      <div class="name">
+        {{book.name}}
+      </div>
+      <div class="author">
+        {{book.author}}
+      </div>
+    </div>
+
+    <div class="book-details">
+      {{book.details}}
+    </div>
+
+    <div class="genres">
+      <a *ngFor="let genre of book.genres" routerLink="/genre/{{genre}}" class="genre-link">
+        {{genre}}
+      </a>
+    </div>
+
+    <div class="footer">
+      <div class="page-number">
+        {{book.pageNo}} pages
+      </div>
+      <div class="publish-date">
+        First published {{book.publishDate}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN -->
+<div class = "container" *ngIf="book && user.isAdmin">
+  <div class="left-side">
+    <img [src]="book.imageUrl" [alt]="book.name" class="book-image"/>
+
+    <button *ngIf="isAuth" (click)="removeBook(book.id)" class="notBorrowed">Remove</button>
+  </div>
+
+  <div class="details">
+  <div class="header">
+    <div class="name">
+      {{book.name}}
+    </div>
+    <div class="author">
+      {{book.author}}
+    </div>
+  </div>
+
+  <div class="book-details">
+    {{book.details}}
+  </div>
+
+  <div class="genres">
+    <a *ngFor="let genre of book.genres" routerLink="/genre/{{genre}}" class="genre-link">
+      {{genre}}
+    </a>
+  </div>
+
+  <div class="footer">
+    <div class="page-number">
+      {{book.pageNo}} pages
+    </div>
+    <div class="publish-date">
+      First published {{book.publishDate}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="details">
+    <div class="title">
+      Add a new book
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="submit()">
+      <text-input [control]="fc.name" [showErrorsWhen]="isSubmitted" type="text" label="Title"></text-input>
+      <text-input [control]="fc.author" [showErrorsWhen]="isSubmitted" type="text" label="Author"></text-input>
+      <div class="genres">
+        <div class="selectItem"><input name="genres" type="checkbox" id="fantasy" aria-valuetext="Fantasy"/>
+        <label for="fantasy">Fantasy</label></div>
+        <div class="selectItem"><input name="genres" type="checkbox" id="romance" aria-valuetext="Romance"/>
+        <label for="romance">Romance</label></div>
+        <div class="selectItem"><input name="genres" type="checkbox" id="horror" aria-valuetext="Horror"/>
+        <label for="horror">Horror</label></div>
+        <div class="selectItem"><input name="genres" type="checkbox" id="adventure" aria-valuetext="Adventure"/>
+        <label for="adventure">Adventure</label></div>
+        <div class="selectItem"><input name="genres" type="checkbox" id="scifi" aria-valuetext="Sci-Fi"/>
+        <label for="scifi">Sci-Fi</label></div>
+        <div class="selectItem"><input name="genres" type="checkbox" id="nonfiction" aria-valuetext="Non-Fiction"/>
+        <label for="nonfiction">Non-Fiction</label></div>
+        <div class="selectItem"><input name="genres" type="checkbox" id="crime" aria-valuetext="Crime"/>
+        <label for="nonfiction">Crime</label></div>
+      </div>
+      <text-input [control]="fc.imageUrl" [showErrorsWhen]="isSubmitted" type="text" label="Image Url"></text-input>
+      <text-input [control]="fc.details" [showErrorsWhen]="isSubmitted" type="text" label="Details"></text-input>
+      <text-input [control]="fc.pageNo" [showErrorsWhen]="isSubmitted" type="text" label="Page Number"></text-input>
+      <text-input [control]="fc.publishDate" [showErrorsWhen]="isSubmitted" type="text" label="Publish date"></text-input>
+      <div class="button">
+        <button type="submit">Add</button>
+      </div>
+    </form>
+  </div>
+</div>

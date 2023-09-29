@@ -1,0 +1,101 @@
+.container{
+  min-height: 300px;
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.book-image{
+  height: 300px;
+  width: 200px;
+  border-radius: 16px;
+  border: 1px solid brown;
+  padding: 3px;
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  width: 600px;
+  border: 1px solid brown;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.header{
+  margin-bottom: 20px;
+}
+
+.name{
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.author{
+  font-size: 20px;
+}
+
+.book-details{
+  margin-bottom: 20px;
+}
+
+.genres{
+  margin-bottom: 20px;
+  min-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.genre-link{
+  background-color: whitesmoke;
+  color: brown;
+  padding: 7px;
+  margin: 0 3px;
+  border-radius: 25px;
+  transition: 0.5s;
+  border: 1px solid brown;
+}
+.genre-link:hover{
+  background-color: brown;
+  color: whitesmoke;
+  transition: 0.5s;
+}
+
+.left-side{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.borrowed{
+  margin-top: 10px;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid brown;
+  opacity: 0.7;
+  background-color: brown;
+  color: white;
+}
+.notBorrowed{
+  margin-top: 10px;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid brown;
+  background-color: brown;
+  color: white;
+  transition: 0.5s;
+}
+.notBorrowed:hover{
+  background-color: white;
+  color: brown;
+  transition: 0.5s;
+  cursor: pointer;
+}

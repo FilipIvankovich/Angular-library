@@ -1,0 +1,52 @@
+.title{
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: brown;
+}
+
+.container{
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  margin-top: 100px;
+}
+
+.genres{
+  margin: 10px;
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  color: brown;
+}
+
+button{
+  margin-top: 20px;
+  margin-left: 25%;
+  width: 100px;
+  height: 30px;
+  color: brown;
+  border-radius: 8px;
+  border: 1px solid brown;
+  background-color: white;
+  font-size: 16px;
+  transition: 0.5s;
+}
+button:hover{
+  transition: 0.5s;
+  background-color: brown;
+  color: white;
+  cursor: pointer;
+}
+
+.login{
+  margin-top: 10px;
+  text-align: center;
+  color: brown;
+  background-color: white;
+  font-size: 16px;
+}

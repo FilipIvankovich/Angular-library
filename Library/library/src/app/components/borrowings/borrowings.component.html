@@ -1,0 +1,38 @@
+<body>
+  <app-not-found
+    [visible]="!books || !books.length"
+    notFoundMessage="You don't have any borrowed books..."
+    resetLinkText="Go get some"
+  >
+  </app-not-found>
+  <div *ngIf="books && books.length != 0">
+    <h1>Borrowed Books</h1>
+
+    <ul>
+      <li *ngFor="let book of books" class="book-item">
+        <a>
+          <img class="bookImage" [src]="book.imageUrl" [alt]="book.name" />
+          <div class="content">
+            <div class="name">
+              {{book.name}}
+            </div>
+            <div class="author">
+              By {{book.author}}
+            </div>
+            <div class="genres">
+              <span *ngFor="let genre of book.genres">
+                {{genre}}
+              </span>
+            </div>
+            <button class="return-button" (click)="delete(book.id)">
+              Return
+            </button>
+            <div class="borrowDate">
+              Borrowed on: {{book.borrowDate}}
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>

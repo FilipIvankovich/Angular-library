@@ -1,0 +1,89 @@
+.container{
+  min-height: 300px;
+  margin: 0 auto;
+  width: 45%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.book-image{
+  height: 120px;
+  width: 80px;
+  border-radius: 16px;
+  border: 1px solid brown;
+  padding: 3px;
+  margin-right: 20px;
+}
+
+.cart-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid brown;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: white;
+}
+
+.cart-items{
+  width: 100%;
+  border: 1px solid brown;
+  border-radius: 25px;
+  padding: 10px;
+  background-color: brown;
+}
+
+.item-section{
+  border-left: 2px solid brown;
+  border-radius: 25px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 60px;
+  justify-content: center;
+}
+
+.borrow-button{
+  margin-top: 10px;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid brown;
+  background-color: brown;
+  color: white;
+  transition: 0.5s;
+}
+.borrow-button:hover{
+  cursor: pointer;
+  background-color: white;
+  color: brown;
+  transition: 0.5s;
+}
+
+.remove-button{
+  text-align: center;
+  padding-top: 8px;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid brown;
+  background-color: white;
+  color: brown;
+  transition: 0.5s;
+}
+.remove-button:hover{
+  cursor: pointer;
+  background-color: brown;
+  color: white;
+  transition: 0.5s;
+}
+
+.page-title{
+  font-size: 25px;
+  font-weight: bold;
+  color: brown;
+}

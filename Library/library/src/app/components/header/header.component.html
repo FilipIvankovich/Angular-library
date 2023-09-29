@@ -1,0 +1,24 @@
+<header>
+  <div class="container">
+    <a routerLink="/" class="logo">Much Books</a>
+
+    <nav>
+      <ul>
+        <li *ngIf="!isAuth">
+          <a routerLink="/login">Login</a>
+        </li>
+        <li class="menu-container" *ngIf="isAuth">
+          <a>{{user.name}}</a>
+          <div class="menu">
+            <a *ngIf="!user.isAdmin" routerLink="/borrowings/{{user.id}}">Borrowings</a>
+            <a *ngIf="user.isAdmin" routerLink="/addBook">Add a Book</a>
+            <a (click)="logout()">Logout</a>
+          </div>
+        </li>
+        <li>
+          <a routerLink="/cart-page" class="cart">Cart <span class="items-in-cart">{{cartQuantity}}</span></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

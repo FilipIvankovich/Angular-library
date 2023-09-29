@@ -1,0 +1,4 @@
+<div class="search-container">
+  <input #s type="text" placeholder="Search Much Books" (keyup.enter)="search(s.value)" [value]="searchTerm" class="search"/>
+  <button (click)="search(s.value)" class="search-button">Search</button>
+</div>

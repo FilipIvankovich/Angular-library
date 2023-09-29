@@ -1,0 +1,33 @@
+.title{
+  margin-bottom: 20px;
+  color: brown;
+  text-align: center;
+}
+
+.container{
+  background-color: white;
+  margin: 0 auto;
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 10000000;
+}
+
+.details{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+}
+
+img{
+  margin-left: 80px;
+  margin-bottom: -100px;
+  width: 600px;
+  height: 600px;
+}

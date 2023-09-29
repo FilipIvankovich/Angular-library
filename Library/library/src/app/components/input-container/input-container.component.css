@@ -1,0 +1,23 @@
+.container{
+  position: relative;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  width: 400px;
+  padding-top: 5px;
+  border: 1px solid brown;
+}
+
+label{
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 15px;
+  color: brown;
+  font-size: 16px;
+}
+
+.content{
+  padding: 0 8px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
